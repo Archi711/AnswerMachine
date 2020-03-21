@@ -1,0 +1,36 @@
+:root {
+  --primaryColor: #252527;
+  --secondaryColor: #410a14;
+  --fontColor: #f3f0ed;
+  --specialColor: #db0048;
+}
+
+.app-container{
+  padding: 2em;
+  box-sizing: border-box;
+  width:100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(var(--primaryColor), var(--secondaryColor));
+  color: var(--fontColor);
+  font-family: 'Baloo Chettan 2';
+}
+
+.app-container__heading{
+  margin: 15vmin auto auto auto;
+  padding: .3em;
+  font-size: 10vmin;
+  max-width: 80%;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: .5em;
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  -ms-border-radius: .5em;
+  -o-border-radius: .5em;
+}
+
+.app-container__headingText--styled{
+  color: var(--specialColor);
+  font-weight: 600;
+}
