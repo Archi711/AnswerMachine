@@ -1,0 +1,113 @@
+
+.QFcontainer{
+  max-width: 80%;
+  margin: 5vmin auto;
+  display: grid;
+  grid-template-areas:    "text input qmarkBtn"    "submitBtn submitBtn submitBtn";
+  font-size: 4vmin;
+  padding: .5em;
+  row-gap: .5em;
+  background: var(--secondaryColor);
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  box-shadow: 0px 0px 10px 0px #00000055;
+}
+
+.QFcontainer__label{
+  grid-area: text;
+  border-left: 1px solid var(--fontColor);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;  /* NEW */
+  min-width: 0; 
+}
+
+.QFcontainer__input{
+  grid-area: input;
+  background: #ffffff33;
+  border:none;
+  padding: .5em;
+  color: inherit; 
+  min-height: 0;  /* NEW */
+  min-width: 0; 
+}
+
+.QFcontainer__input:focus{
+  outline: none;
+  animation: focusAnim .6s ease-in-out both;
+  -webkit-animation: focusAnim .6s ease-in-out both;
+}
+
+.QFcontainer__button{ 
+  grid-area: btn;
+  color: inherit;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.QFcontainer__button:hover{
+  transition: .3s all;
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  -o-transform: scale(1.07);
+  -webkit-transition: .3s all;
+  -moz-transition: .3s all;
+  -ms-transition: .3s all;
+  -o-transition: .3s all;
+}
+
+.QFcontainer__button--questionMark{
+  grid-area: qmarkBtn;
+  min-width: 10vmin;
+  min-height: 10vmin;
+  color: inherit;
+  background: #6b63b5;
+  border: 3px solid #00000055;
+}
+
+.QFcontainer__button--submit{
+  grid-area: submitBtn;
+  min-width: 80%;
+  background: var(--specialColor);
+  padding: .3em;
+  font-size: 5vmin;
+  border: none;
+}
+
+@media (max-width: 1024px){
+  .QFcontainer{
+    grid-template-areas: 
+    "text text"
+    "input qmarkBtn"
+    "submitBtn submitBtn";
+  }
+  .QFcontainer__text{
+    border: none;
+  }
+  .QFcontainer__button{
+    margin: 0 auto;
+  }
+}
+
+@keyframes focusAnim{
+  from {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(219,0,72,1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(219,0,72,1);
+    box-shadow: 0px 0px 0px 0px rgba(219,0,72,1);
+  }
+  to {
+    -webkit-box-shadow: 0px 7px 0px 0px rgba(219,0,72,1);
+    -moz-box-shadow: 0px 7px 0px 0px rgba(219,0,72,1);
+    box-shadow: 0px 7px 0px 0px rgba(219,0,72,1);
+  }
+}
+
+
+
